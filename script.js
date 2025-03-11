@@ -1,4 +1,3 @@
-// Toggle mobile navigation
 function toggleNav() {
     const navLinks = document.getElementById("navLinks");
     if (navLinks.style.display === "flex") {
