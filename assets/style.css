@@ -217,14 +217,13 @@
     background: #000000;
   }
 
-
   .membership-section {
     padding: 4rem 2rem;
   }
   
   .membership-container {
     display: flex;
-    background: url('https://i.ibb.co/G3RfKrVY/Untitled-design-2.png') center/cover no-repeat;
+    background: url('./assets/footer.png') center/cover no-repeat;
     border-radius: 15px;
     height: 300px;
     position: relative;
