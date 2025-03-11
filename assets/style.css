@@ -223,7 +223,7 @@
   
   .membership-container {
     display: flex;
-    background: url('./assets/footer.png') center/cover no-repeat;
+    background: url('./footer.png') center/cover no-repeat;
     border-radius: 15px;
     height: 300px;
     position: relative;
