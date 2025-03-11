@@ -1,9 +1,10 @@
 {
     "2025-hotgirlwalk0": {
-        "title":"MESS x UTS Engg Soc Girl Walk",
+        "title":"MQU x UTS Hot Girl Walk",
         "date":"March 22, 2025",
         "location":"Manly Beach",
-        "description":"Walk with fellow UTS engineers around manly! Along with 3$ for matcha and hotdogs yummy yummy so good."
+        "description":"Walk with fellow UTS engineers around manly! Along with 3$ for matcha and hotdogs yummy yummy so good.",
+        "img":"2025-hotgirlwalk0.jpg"
     },
     "2025-roboticsworkshop0": {
         "title":"Robotics Workshop",
@@ -15,12 +16,7 @@
         "title":"MESS Welcome Picnic",
         "date":"March 17, 2025",
         "location":"Ubar, 1CC",
-        "description":"Our welcome event for MESS. Come learn about our society, our upcoming events such as networking career and tour events, and enjoy pizza and boardgames too!"
-    },
-    "testevent": {
-        "title":"event",
-        "date":"MARCH MARCH 930192",
-        "location":"ManlyManlyManlyManlyManlyManlyManlyManly",
-        "description":"Walk with fellowWalk witWalk with fellowWalk with fellowWalk with fellowWalk with fellowWalk with fellow"
+        "description":"Our welcome event for MESS. Come learn about our society, our upcoming events such as networking career and tour events, and enjoy pizza and boardgames too!",
+        "img":"2025-welcome0.png"
     }
 }

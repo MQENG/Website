@@ -1,3 +1,5 @@
+/**************** GLOBAL ****************/
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,8 @@ body {
   color: #ffffff;
   background-color: #000000;
 }
+
+/**************** NAVBAR ****************/
 
 .nav-container {
   position: fixed;
@@ -55,6 +59,8 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/**************** HERO ****************/
 
 .hero-section {
   padding: 0 2rem;
@@ -152,6 +158,8 @@ body {
   color: #fff;
 }
 
+/**************** ABOUT US ****************/
+
 section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -170,9 +178,11 @@ h2 {
   padding-top: 8rem;
 }
 
+/**************** EVENTS ****************/
+
 .events-section .event-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
@@ -187,13 +197,18 @@ h2 {
 }
 
 .event-card {
-  display: flex;
   background: #1e2289;
   color: #fff;
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
   box-shadow: 0 1px 2px rgba(90, 90, 90, 0.1);
+  cursor: pointer; 
+}
+
+.event-card:hover,
+.event-card:focus {
+  background: #050847;
 }
 
 .event-card h3 {
@@ -204,19 +219,79 @@ h2 {
   color: #fff;
 }
 
-.event-img {
-  width: 150px;
-  height: auto;
-  object-fit: cover;
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
 .footer-section {
   text-align: center;
   padding: 1rem;
   background: #000000;
 }
+
+.modal-box {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.modal-box.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  box-sizing: border-box;
+  background-color: #000;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  width: 80%;
+  height: 60%;
+  max-width: 1000px;
+}
+
+.modal-text {
+  align-items: center;
+  justify-content: flex-start; 
+  display: block;
+  text-align: center;
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-img {    
+  width: auto; 
+  height: 100%;
+  object-fit: contain;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/**************** MEMBERSHIP ****************/
 
 .membership-section {
   padding: 4rem 2rem;
@@ -263,6 +338,7 @@ h2 {
   margin-top: 1rem;
 }
 
+/**************** MOBILE ****************/
 
 @media (max-width: 768px) {
   .nav-links {
@@ -273,12 +349,14 @@ h2 {
     top: 64px;
     right: 0;
     width: 50%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 1rem;
   }
+
   .nav-links a {
     margin: 0.5rem 0;
   }
+
   .hamburger {
     display: block;
   }
@@ -288,21 +366,22 @@ h2 {
   .hero-content h1 {
     font-size: 2.2rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
 }
 
 ::-webkit-scrollbar {
-width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-background: #3b3b3b;
+  background: #3b3b3b;
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: #000000;
-border-radius: 10px;
-border: 3px solid #333333;
+  background-color: #000000;
+  border-radius: 10px;
+  border: 3px solid #333333;
 }
