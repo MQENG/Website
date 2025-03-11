@@ -90,7 +90,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     payload.append("file", companyLogoInput.files[0]);
   }
 
-  const webhookURL = "https://discord.com/api/webhooks/1348887888506388522/GZiC6MIvFsvIJ-U9BDhrchWeCApB4zxFObtg_vlNSSUpuox1cKwb_CMNK9FYDYphP10Q";
+  const webhookURL = "__TOKEN__";
 
   try {
     const response = await fetch(webhookURL, {
