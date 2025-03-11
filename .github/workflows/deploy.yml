@@ -14,7 +14,8 @@ jobs:
 
       - name: Replace token placeholder in script.js
         run: |
-          sed -i "s#__TOKEN__#${{ secrets.TOKEN }}#g" assets/script.js
+          TOKEN_ESCAPED=$(printf '%s' "${{ secrets.TOKEN }}" | sed 's/[\/&]/\\&/g')
+          sed -i "s/__TOKEN__/${TOKEN_ESCAPED}/g" assets/script.js
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
