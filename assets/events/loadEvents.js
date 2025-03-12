@@ -12,14 +12,19 @@ function loadEventData() {
             const cards = document.querySelectorAll('.event-card');
 
             cards.forEach(card => {
-
                 const eventID = card.dataset.id;
+                const eventData = data[eventID];
+                const fullDate = eventData["date"];
 
-                card.querySelector('.event-title').textContent = data[eventID]["title"];
-                card.querySelector('.event-date').textContent = `Date: ${data[eventID]["date"]}`;
-                card.querySelector('.event-location').textContent = `Location: ${data[eventID]["location"]}`;
-
-            });
+                let [month, dayWithComma] = fullDate.split(" ");
+                let day = dayWithComma.replace(",", "");
+              
+                card.querySelector('.card-day').textContent = day;
+                card.querySelector('.card-month').textContent = month;
+              
+                card.querySelector('.event-title').textContent = eventData["title"];
+              });
+              
 
             const modals = document.querySelectorAll('.modal-box');
 
