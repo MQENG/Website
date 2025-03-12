@@ -72,7 +72,7 @@
 
   .hero-top {
     flex: 2;
-    background: url('/hero.png') center/cover no-repeat;
+    background: url('./hero.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     border-top-left-radius: 15px;
