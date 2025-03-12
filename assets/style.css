@@ -72,7 +72,7 @@
 
   .hero-top {
     flex: 2;
-    background: url('/assets/hero.png') center/cover no-repeat;
+    background: url('https://i.ibb.co/M5D005GN/hero.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     border-top-left-radius: 15px;
