@@ -1,219 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Macquarie Engineering Student Society</title>
-  <link rel="stylesheet" href="./assets/style.css" />
-  <script src="assets/events/loadEvents.js" defer></script>
-  <script src="assets/events/modalHandler.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <nav class="nav-container">
-    <div class="nav-logo">
-    <a href="#hero"><img src="./logo.png" width="300" style="padding-top: 10px;" alt="Logo"></a>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html#about">About</a>
-      <a href="index.html#events">Events</a>
-      <a href="sponsor.html">Sponsor Us</a>
-      <a href="index.html#membership" class="btn" style="background-color: #020bff; padding: 10px 20px; border-radius: 0;">Membership</a>
-    </div>
-    <div class="hamburger" onclick="toggleNav()">
-      &#9776;
-    </div>
-  </nav>
-  <br>
-  <br>
-  <br>
-<header id="hero" class="hero-section" style="padding-top: 5rem;">
-    <div class="hero-top">
-        <div class="hero-info">
-            <h1>Empowering Future Engineers</h1>
-            <p>Join us to innovate, collaborate, and excel in the field of engineering.</p>
-            <div class="hero-buttons">
-                <a href="https://forms.office.com/r/gqhAZ6N8cX" class="btn member-btn">Become a member</a>
-                <a href="https://discord.com/invite/tP6E4efsyx" class="btn discord-btn">Join our Discord</a>
-            </div>
-        </div>
-    </div>
-    <div class="hero-bottom">
-        <h3>Proudly sponsored by:</h3>
-      <div class="partnership-list">
-        <div class="sponsor">
-          <img src="https://i.ibb.co/JwK8KcGw/305919275-519094576882959-4081111920969702474-n.png" alt="Sponsor 1">
-          <p>E-Lead</p>
-        </div>
-        <div class="sponsor">
-          <img src="https://i.ibb.co/YFQMCLnV/unnamed-3-1.jpg" alt="Sponsor 2">
-          <p>Semiconductor Sector Service Bureau</p>
-        </div>
-        <div class="sponsor">
-          <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFdoIhv055bEw/company-logo_200_200/company-logo_200_200/0/1715940378252/red_bull_logo?e=2147483647&v=beta&t=UDRkzGzLm4KalhFnSA-QT62HmLwGyLENcISAJSOyz60" alt="Sponsor 3">
-          <p>Red Bull</p>
-        </div>
-        <div class="sponsor">
-          <a href="sponsor.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Sponsor 3">
-            <p>Github</p>
-          </a>
-        </div>
-        <div class="sponsor">
-          <a href="sponsor.html">
-            <img src="https://i.ibb.co/XNNp0sf/images-1.png" alt="Sponsor 3">
-            <p>Apply now!</p>
-          </a>
-        </div>
-        <div class="sponsor">
-          <a href="sponsor.html">
-            <img src="https://i.ibb.co/XNNp0sf/images-1.png" alt="Sponsor 3">
-            <p>Apply now!</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>  
 
-  <div class="split-container">
-    <div class="left-addon" style="padding-right: 1rem;">
-      <div class="addon-header" style="padding-top: 4rem;">
-        <i class="fa fa-building" aria-hidden="true" style="border: 2px solid white; border-radius: 50%; padding: 10px;"></i>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macquarie Engineering Student Society</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <!-- NavBar -->
+  <header class="header">
+    <div class="containerNav">
+      <div class="logo-group">
+        <div class="logo-icon-wrapper">
+          <div class="icon-bg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cpu-icon">
+              <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+              <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+              <path d="M15 2v2"></path>
+              <path d="M15 20v2"></path>
+              <path d="M2 15h2"></path>
+              <path d="M2 9h2"></path>
+              <path d="M20 15h2"></path>
+              <path d="M20 9h2"></path>
+              <path d="M9 2v2"></path>
+              <path d="M9 20v2"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="site-text">
+          <div class="site-title">MESS</div>
+          <div class="site-subtitle">MACQUARIE ENGINEERING</div>
+        </div>
       </div>
-      <span class="addon-arrow">&darr;</span>
-      <div class="addon-header">
-        <i class="fa fa-gamepad" aria-hidden="true" style="border: 2px solid white; border-radius: 50%; padding: 10px;"></i>
+
+      <nav class="nav-links">
+        <a href="/#about" class="nav-link">About</a>
+        <a href="/sponsors" class="nav-link">Sponsors Us</a>
+        <button class="join-button">JOIN NOW</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="container">
+    <div>
+      <div class="badge">MACQUARIE UNIVERSITY</div>
+      <h1>ENGINEERING<br><span class="gradient-text">STUDENT</span><br>SOCIETY</h1>
+      <div class="divider"></div>
+      <p class="description">Connect together while you connect the world. Join Macquarie's most innovative engineering
+        community.</p>
+      <div class="button-group">
+        <button class="btn primary"><i data-lucide="rocket"></i>JOIN THE REVOLUTION</button>
+        <button class="btn secondary"><i data-lucide="calendar"></i>VIEW EVENTS</button>
       </div>
-      <span class="addon-arrow">&darr;</span>
-      <div class="addon-header">
-        <i class="fa fa-users" aria-hidden="true" style="border: 2px solid white; border-radius: 50%; padding: 10px;"></i>
-      </div>
-      <span class="addon-arrow">&darr;</span>
-      <div class="addon-header">
-        <i class="fa fa-wrench" aria-hidden="true" style="border: 2px solid white; border-radius: 50%; padding: 10px;"></i>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" style="color:#22d3ee">700+</div>
+          <div class="stat-label">MEMBERS</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:#3b82f6">50+</div>
+          <div class="stat-label">EVENTS</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:#a855f7">2+</div>
+          <div class="stat-label">YEARS</div>
+        </div>
       </div>
     </div>
-    <div class="left">
-      <div class="left-content">
-        <div class="blue-line" style="width: 15rem; height: 1px; background-color: #020bff; margin-bottom: 1rem;">
-          <div style="width: 5rem; height: 3px; background-color: #020bff; float: left;"></div>
-        </div>
-        <h3>Connect together while you connect the world</h3>
-        <br>
-        <div class="section">
-          <h3>Company Visits</h3>
-          <p>Join us for exclusive tours of leading engineering companies and see the industry in action.</p>
-        </div>
-        <br>
-        <div class="section">
-          <h3>Game Nights</h3>
-          <p>Relax and have fun with fellow members during our regular game nights.</p>
-        </div>
-        <br>
-        <div class="section">
-          <h3>Networking Events</h3>
-          <p>Expand your professional network by attending our networking events with industry professionals.</p>
-        </div>
-        <br>
-        <div class="section">
-          <h3>Workshops</h3>
-          <p>Participate in hands-on workshops to enhance your engineering skills.</p>
-        </div>
+    <div class="visual">
+      <div class="center-circle"><img src="../icon.png" alt="Logo" style="width:100%; height:100%;"></div>
+      <div class="orbit">
+        <div class="orbit-item orbit-top"><i data-lucide="building-2"></i></div>
+        <div class="orbit-item orbit-right"><i data-lucide="network"></i></div>
+        <div class="orbit-item orbit-bottom"><i data-lucide="wrench"></i></div>
+        <div class="orbit-item orbit-left"><i data-lucide="gamepad-2"></i></div>
       </div>
-    </div>
-    <div class="right">
-      <img src="https://i0.wp.com/laurenrace.com/wp-content/uploads/2020/12/12-2020-2-29-JoshMieleBlindSolderingWS_177.jpg?resize=750%2C500&ssl=1" alt="Descriptive Alt Text">
+      <svg class="pulsing-circle">
+        <defs>
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(6, 182, 212, 0.5)" />
+            <stop offset="100%" stop-color="rgba(59, 130, 246, 0.5)" />
+          </linearGradient>
+        </defs>
+        <circle cx="50%" cy="50%" r="140" fill="none" stroke="url(#lineGradient)" stroke-width="2"
+          class="animate-pulse" />
+      </svg>
     </div>
   </div>
 
-  <section id="about" class="about-section">
-    <h2>About Us</h2>
-    <p>
-      The Macquarie Engineering Student Society (EngSoc) is a vibrant student-run 
-      organization dedicated to supporting and uniting engineering students 
-      at Macquarie University.
-    </p>
-    <p>
-      Through industry connections, social events, and professional development 
-      programs, we provide opportunities for students to develop their skills 
-      and networks. Join us to expand your horizons beyond the classroom.
-    </p>
+  <!-- WHAT WE DO -->
+  <section class="features-section">
+    <div class="section-title">WHAT WE DO</div>
+    <div class="section-subtitle">Connect together while you connect the world</div>
+    <div class="features-grid">
+      <div class="feature" style="background-color: #1c7de4;">
+        <div class="feature-icon"><i data-lucide="briefcase"></i></div>
+        <h3>Company Visits</h3>
+        <p>Exclusive tours of leading engineering companies</p>
+      </div>
+      <div class="feature" style="background-color: #cd359c;">
+        <div class="feature-icon"><i data-lucide="gamepad"></i></div>
+        <h3>Game Nights</h3>
+        <p>Relax and connect with fellow engineers</p>
+      </div>
+      <div class="feature" style="background-color: #0ea565;">
+        <div class="feature-icon"><i data-lucide="users"></i></div>
+        <h3>Networking Events</h3>
+        <p>Build connections with industry professionals</p>
+      </div>
+      <div class="feature" style="background-color: #e13423;">
+        <div class="feature-icon"><i data-lucide="wrench"></i></div>
+        <h3>Workshops</h3>
+        <p>Hands-on skill development sessions</p>
+      </div>
+    </div>
   </section>
 
-  <section id="events" class="events-section">
-    <h2>Upcoming Events</h2>
-    <div class="event-list">
+  <br><br><br><br><br><br>
 
-      <div class="event-card" data-id="2025-welcome0">
-        <div class="card-date">
-          <span class="card-day"></span>
-          <span class="card-month"></span>
-        </div>
-        <div class="card-info">
-          <h3 class="event-title"></h3>
-          <p class="view-details">View details</p>
-        </div>
+  <!-- POWERED BY -->
+  <section class="powered-section">
+    <div class="powered-title">POWERED BY</div>
+    <div class="powered-heading">INDUSTRY LEADERS</div>
+    <div class="sponsors">
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(34,211,238,0.15); border: 2px solid #22d3ee;">
+        <i data-lucide="github" class="sponsor-icon"></i>
+        <div class="sponsor-name">GitHub</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Empowering open source and collaboration</div>
       </div>
-      
-      <div class="event-card" data-id="2025-hotgirlwalk0">
-        <div class="card-date">
-          <span class="card-day"></span>
-          <span class="card-month"></span>
-        </div>
-        <div class="card-info">
-          <h3 class="event-title"></h3>
-          <p class="view-details">View details</p>
-        </div>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(236,72,153,0.15); border: 2px solid #ec4899;">
+        <i data-lucide="zap" class="sponsor-icon"></i>
+        <div class="sponsor-name">Red Bull</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Fueling energy and innovation</div>
       </div>
-      
-      <div class="event-card" data-id="2025-roboticsworkshop0">
-        <div class="card-date">
-          <span class="card-day"></span>
-          <span class="card-month"></span>
-        </div>
-        <div class="card-info">
-          <h3 class="event-title"></h3>
-          <p class="view-details">View details</p>
-        </div>
-      </div>      
-
-    <div class="modal-box" data-id="2025-welcome0">
-      <div class="modal-content">
-        <div class="modal-text">
-          <span class="close-btn">&times;</span>
-          <h2 class="modal-title"></h2>
-          <h3 class="modal-location"></h3>
-          <br>
-          <p class="modal-desc"></p>
-        </div>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(16,185,129,0.15); border: 2px solid #22c55e;">
+        <i data-lucide="server" class="sponsor-icon"></i>
+        <div class="sponsor-name">S3B</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Supporting engineering infrastructure</div>
+      </div>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(168,85,247,0.15); border: 2px solid #a855f7;">
+        <i data-lucide="award" class="sponsor-icon"></i>
+        <div class="sponsor-name">E-lead</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Championing leadership in engineering</div>
       </div>
     </div>
-
-    <div class="modal-box" data-id="2025-hotgirlwalk0">
-      <div class="modal-content">
-        <div class="modal-text">
-          <span class="close-btn">&times;</span>
-          <h2 class="modal-title"></h2>
-          <h3 class="modal-location"></h3>
-          <br>
-          <p class="modal-desc"></p>
-        </div>
-      </div>
+    <div style="margin-top:2rem; color:#94a3b8; font-size:1rem;">
+      <i data-lucide="handshake" style="vertical-align:middle; margin-right:0.5rem;"></i>
+      <span>We partner with world-class organisations to bring you the best opportunities, resources, and experiences.</span>
     </div>
-
-    <div class="modal-box" data-id="2025-roboticsworkshop0">
-      <div class="modal-content">
-        <div class="modal-text">
-          <span class="close-btn">&times;</span>
-          <h2 class="modal-title"></h2>
-          <h3 class="modal-location"></h3>
-          <br>
-          <p class="modal-desc"></p>
-        </div>
-      </div>
-    </div>
-
   </section>
+
+
+  <br><br><br><br><br><br>
 
   <section id="membership" class="membership-section">
     <div class="membership-container">
@@ -223,12 +166,83 @@
         <a href="#" class="btn enquire-btn">Enquire today</a>
       </div>
     </div>
-  </section>  
+  </section>
 
-  <footer class="footer-section">
-    <p>&copy; <span id="year"></span> Macquarie Engineering Student Society. All rights reserved.</p>
+
+  <br><br><br><br><br><br>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="containerfooter">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-group">
+            <div class="logo-icon-wrapper">
+              <div class="icon-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="cpu-icon">
+                  <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+                  <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+                  <path d="M15 2v2"></path>
+                  <path d="M15 20v2"></path>
+                  <path d="M2 15h2"></path>
+                  <path d="M2 9h2"></path>
+                  <path d="M20 15h2"></path>
+                  <path d="M20 9h2"></path>
+                  <path d="M9 2v2"></path>
+                  <path d="M9 20v2"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="site-text">
+              <div class="site-title">MESS</div>
+              <div class="site-subtitle">MACQUARIE ENGINEERING</div>
+            </div>
+          </div>
+          <p class="footer-tagline">Building the future, one connection at a time.</p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">QUICK LINKS</h3>
+          <ul class="footer-links">
+            <li><a href="https://discord.com/invite/tP6E4efsyx">Events</a></li>
+            <li><a href="https://discord.com/invite/tP6E4efsyx">Membership</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="footer-col">
+          <h3 class="footer-heading">CONNECT</h3>
+          <div class="footer-contact">
+            <div>Macquarie University</div>
+            <div>Sydney, Australia</div>
+            <div>contact.messsociety@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Macquarie Engineering Student Society. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+
+  <script>lucide.createIcons();</script>
+
+
+  <script>
+    document.querySelectorAll('button, .enquire-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        window.location.href = "https://discord.com/invite/tP6E4efsyx";
+      });
+    });
+  </script>
+
 </body>
+
 </html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macquarie Engineering Student Society</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <style>
+        .custom-sponsors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.5rem;
+            margin: 2rem 0;
+            justify-items: center;
+        }
+
+        .custom-sponsor {
+            background: linear-gradient(120deg, #10151c 60%, #1a2332 100%);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1.5px 0 #22d3ee inset;
+            padding: 2.5rem 2rem 2rem 2rem;
+            min-width: 240px;
+            max-width: 340px;
+            width: 100%;
+            position: relative;
+            border: 2px solid transparent;
+            transition: box-shadow 0.2s, border 0.2s;
+            overflow: hidden;
+        }
+
+
+        .custom-sponsor .sponsor-icon {
+            font-size: 2.5rem;
+            color: #22d3ee;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 8px #22d3ee88);
+        }
+
+        .custom-sponsor .sponsor-name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+            color: #fff;
+            text-shadow: 0 1px 8px #22d3ee22;
+        }
+
+        .custom-sponsor .sponsor-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #22d3ee;
+            margin-bottom: 0.25rem;
+            text-shadow: 0 1px 8px #22d3ee44;
+        }
+
+        .custom-sponsor .sponsor-desc {
+            font-size: 1rem;
+            color: #a3a3a3;
+            margin-bottom: 1rem;
+        }
+
+        .custom-sponsor ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 1rem;
+        }
+
+        .custom-sponsor ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2em;
+            position: relative;
+            text-align: left;
+        }
+
+        .custom-sponsor ul li:before {
+            content: "•";
+            color: #22d3ee;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            top: 0;
+        }
+
+        .bronze {
+            border-color: #b08d57;
+            background: linear-gradient(120deg, #18120a 60%, #2c1d0e 100%);
+        }
+
+        .bronze .sponsor-price {
+            color: #b08d57;
+        }
+
+        .bronze .sponsor-icon {
+            color: #b08d57;
+        }
+
+        .silver {
+            border-color: #bfc1c2;
+            background: linear-gradient(120deg, #23272b 60%, #3a3f44 100%);
+        }
+
+        .silver .sponsor-price {
+            color: #bfc1c2;
+        }
+
+        .silver .sponsor-icon {
+            color: #bfc1c2;
+        }
+
+        .gold {
+            border-color: #ffd700;
+            background: linear-gradient(120deg, #2c2500 60%, #4d3f00 100%);
+        }
+
+        .gold .sponsor-price {
+            color: #ffd700;
+        }
+
+        .gold .sponsor-icon {
+            color: #ffd700;
+        }
+
+        .platinum {
+            border-color: #e5e4e2;
+            background: linear-gradient(120deg, #232323 60%, #4e4e4e 100%);
+        }
+
+        .platinum .sponsor-price {
+            color: #e5e4e2;
+        }
+
+        .platinum .sponsor-icon {
+            color: #e5e4e2;
+        }
+
+        .popular {
+            border-width: 3px;
+            border-color: #22d3ee !important;
+            box-shadow: 0 0 0 4px #22d3ee44;
+            z-index: 2;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -1.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #22d3ee 60%, #3b82f6 100%);
+            color: #000;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 0.35em 1.2em;
+            border-radius: 999px;
+            box-shadow: 0 2px 8px #22d3ee44;
+            letter-spacing: 1px;
+            z-index: 3;
+        }
+
+        @media (max-width: 700px) {
+            .custom-sponsors {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .custom-sponsor {
+                max-width: 100%;
+            }
+        }
+
+        .features-section {
+            border-radius: 1.5rem;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid .feature {
+            background: rgba(34, 211, 238, 0.07);
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px #22d3ee22;
+            padding: 2rem 1.5rem;
+            transition: box-shadow 0.2s;
+            border: 1px solid #22d3ee22;
+        }
+
+        .features-grid .feature:hover {
+            box-shadow: 0 4px 24px #22d3ee44;
+            border-color: #22d3ee;
+        }
+
+        .features-grid .feature-icon {
+            font-size: 2rem;
+            color: #22d3ee;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 8px #22d3ee88);
+        }
+
+        .features-grid h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .features-grid p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #22d3ee;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 8px #22d3ee22;
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 8px #22d3ee22;
+        }
+
+        .powered-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #22d3ee;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 8px #22d3ee22;
+        }
+
+        .powered-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 8px #22d3ee22;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header class="header">
+        <div class="containerNav">
+            <div class="logo-group" onclick="window.location.href='/'">
+                <div class="logo-icon-wrapper">
+                    <div class="icon-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="cpu-icon">
+                            <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+                            <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+                            <path d="M15 2v2"></path>
+                            <path d="M15 20v2"></path>
+                            <path d="M2 15h2"></path>
+                            <path d="M2 9h2"></path>
+                            <path d="M20 15h2"></path>
+                            <path d="M20 9h2"></path>
+                            <path d="M9 2v2"></path>
+                            <path d="M9 20v2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="site-text">
+                    <div class="site-title">MESS</div>
+                    <div class="site-subtitle">MACQUARIE ENGINEERING</div>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/sponsors" class="nav-link">Sponsors Us</a>
+                <button class="join-button">JOIN NOW</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SPONSORSHIP HERO SECTION -->
+    <section class="features-section">
+        <div class="section-title">Sponsor MESS</div>
+        <div class="section-subtitle">
+            Partner with MESS and support our mission to build a thriving tech community.<br>
+            Your sponsorship helps us create amazing events and opportunities for our members.
+        </div>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon"><i data-lucide="users"></i></div>
+                <h3>Reach</h3>
+                <p>Connect with our growing community of tech professionals and enthusiasts.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon"><i data-lucide="megaphone"></i></div>
+                <h3>Brand Exposure</h3>
+                <p>Increase your brand visibility through our events and digital platforms.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon"><i data-lucide="trending-up"></i></div>
+                <h3>Growth</h3>
+                <p>Support the next generation of tech talent and innovation.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon"><i data-lucide="heart-handshake"></i></div>
+                <h3>Impact</h3>
+                <p>Make a meaningful difference in the tech community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORSHIP TIERS -->
+    <section class="powered-section">
+        <div class="powered-title">Sponsorship Tiers</div>
+        <div class="powered-heading">Choose the sponsorship level that best fits your goals and budget</div>
+        <div class="sponsors custom-sponsors">
+            <!-- Bronze -->
+            <div class="sponsor custom-sponsor bronze">
+                <div class="sponsor-icon"><i data-lucide="medal"></i></div>
+                <div class="sponsor-name">Bronze</div>
+                <div class="sponsor-price">$500</div>
+                <div class="sponsor-desc">Entry level for small businesses</div>
+                <ul>
+                    <li>Logo on event materials</li>
+                    <li>Social media mentions (5)</li>
+                    <li>Thank you post on our website</li>
+                </ul>
+                <div style="position: absolute; left: 0; right: 0; bottom: 1.5rem; text-align: center;"></div>
+                <button class="sponsor-btn" data-tier="Bronze"
+                    style="padding: 0.75em 2em; font-size: 1.1rem; background: linear-gradient(90deg,#22d3ee 60%,#3b82f6 100%); color: #000000; border: none; border-radius: 999px; font-weight: bold; cursor: pointer;     position: absolute; bottom: 0; margin: 20px;">
+                    Enquire Now
+                </button>
+            </div>
+            <!-- Silver -->
+            <div class="sponsor custom-sponsor silver popular">
+                <div class="popular-badge">POPULAR</div>
+                <div class="sponsor-icon"><i data-lucide="medal"></i></div>
+                <div class="sponsor-name">Silver</div>
+                <div class="sponsor-price">$750</div>
+                <div class="sponsor-desc">Most popular for growing companies</div>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Featured logo placement</li>
+                    <li>Dedicated discord announcements</li>
+                    <li>Dedicated social media posts</li>
+                </ul>
+                <div style="position: absolute; left: 0; right: 0; bottom: 1.5rem; text-align: center;"></div>
+                <button class="sponsor-btn" data-tier="Silver"
+                    style="padding: 0.75em 2em; font-size: 1.1rem; background: linear-gradient(90deg,#22d3ee 60%,#3b82f6 100%); color: #000000; border: none; border-radius: 999px; font-weight: bold; cursor: pointer;     position: absolute; bottom: 0; margin: 20px;">
+                    Enquire Now
+                </button>
+            </div>
+            <!-- Gold -->
+            <div class="sponsor custom-sponsor gold">
+                <div class="sponsor-icon"><i data-lucide="medal"></i></div>
+                <div class="sponsor-name">Gold</div>
+                <div class="sponsor-price">$1200</div>
+                <div class="sponsor-desc">Premium for established companies</div>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Premium logo placement</li>
+                    <li>Discord channels customization</li>
+                    <li>Speaking opportunity at events</li>
+                    <li>Company profile on website</li>
+                    <li>Custom promotional materials</li>
+                    <li>Priority booth selection</li>
+                </ul>
+                <br><br>
+                <div style="position: absolute; left: 0; right: 0; bottom: 1.5rem; text-align: center;"></div>
+                <button class="sponsor-btn" data-tier="Gold"
+                    style="padding: 0.75em 2em; font-size: 1.1rem; background: linear-gradient(90deg,#22d3ee 60%,#3b82f6 100%); color: #000000; border: none; border-radius: 999px; font-weight: bold; cursor: pointer;     position: absolute; bottom: 0; margin: 20px;">
+                    Enquire Now
+                </button>
+            </div>
+            <!-- Platinum -->
+            <div class="sponsor custom-sponsor platinum">
+                <div class="sponsor-icon"><i data-lucide="medal"></i></div>
+                <div class="sponsor-name">Platinum</div>
+                <div class="sponsor-price">$1800</div>
+                <div class="sponsor-desc">Ultimate for major industry leaders</div>
+                <ul>
+                    <li>All Gold benefits</li>
+                    <li>Exclusive logo placement</li>
+                    <li>Keynote speaking opportunity</li>
+                    <li>Custom sponsorship package</li>
+                    <li>Dedicated marketing campaign</li>
+                    <li>VIP event access</li>
+                    <li>Annual partnership recognition</li>
+                </ul>
+                <div style="position: absolute; left: 0; right: 0; bottom: 1.5rem; text-align: center;"></div>
+                <button class="sponsor-btn" data-tier="Platinum"
+                    style="padding: 0.75em 2em; font-size: 1.1rem; background: linear-gradient(90deg,#22d3ee 60%,#3b82f6 100%); color: #000000; border: none; border-radius: 999px; font-weight: bold; cursor: pointer;     position: absolute; bottom: 0; margin: 20px;">
+                    Enquire Now
+                </button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="containerfooter">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-group">
+                        <div class="logo-icon-wrapper">
+                            <div class="icon-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="cpu-icon">
+                                    <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+                                    <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+                                    <path d="M15 2v2"></path>
+                                    <path d="M15 20v2"></path>
+                                    <path d="M2 15h2"></path>
+                                    <path d="M2 9h2"></path>
+                                    <path d="M20 15h2"></path>
+                                    <path d="M20 9h2"></path>
+                                    <path d="M9 2v2"></path>
+                                    <path d="M9 20v2"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="site-text">
+                            <div class="site-title">MESS</div>
+                            <div class="site-subtitle">MACQUARIE ENGINEERING</div>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Building the future, one connection at a time.</p>
+                </div>
+
+                <!-- Quick links -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://discord.com/invite/tP6E4efsyx">Events</a></li>
+                        <li><a href="https://discord.com/invite/tP6E4efsyx">Membership</a></li>
+                        <li><a href="#">Sponsors</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact info -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">CONNECT</h3>
+                    <div class="footer-contact">
+                        <div>Macquarie University</div>
+                        <div>Sydney, Australia</div>
+                        <div>contact.messsociety@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Macquarie Engineering Student Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>lucide.createIcons();</script>
+
+    <!-- Modal HTML -->
+    <div id="sponsorModal"
+        style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.65); align-items:center; justify-content:center;">
+        <div
+            style="background:#18181b; border-radius:1.25rem; padding:2rem 2.5rem; max-width:900px; width:95%; box-shadow:0 8px 32px rgba(0,0,0,0.45); position:relative; display:flex; flex-direction:row; gap:2rem;">
+            <!-- Left Section -->
+            <div style="flex:1; min-width:220px; border-right:1px solid #22d3ee22; padding-right:2rem;">
+                <h2 style="color:#22d3ee; margin-bottom:1rem; font-size:1.3rem;">Get in Touch</h2>
+                <p style="color:#fff; margin-bottom:1.5rem;">Ready to become a sponsor? Let's discuss how we can work
+                    together.</p>
+                <div style="margin-bottom:1.2rem;">
+                    <label style="color:#22d3ee; font-weight:bold;">Email</label>
+                    <div style="color:#fff;">contact.messsociety@gmail.com</div>
+                </div>
+                <div>
+                    <label style="color:#22d3ee; font-weight:bold;">Partnership</label>
+                    <div style="color:#fff;">We're open to custom sponsorship packages tailored to your needs.</div>
+                </div>
+            </div>
+            <!-- Right Section -->
+            <div style="flex:2; min-width:260px; padding-left:2rem; position:relative;">
+                <button id="closeModal"
+                    style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; color:#22d3ee; cursor:pointer;">&times;</button>
+                <h2 id="modalTitle" style="color:#22d3ee; margin-bottom:1rem; font-size:1.3rem;">Sponsorship Enquiry
+                </h2>
+                <form id="sponsorForm">
+                    <div style="margin-bottom:1rem;">
+                        <label style="color:#fff;">Company Name:</label> <br><br>
+                        <input type="text" name="company" required
+                            style="width:100%; padding:0.5em; border-radius:0.5em; border:1px solid #22d3ee22; background:#232323; color:#fff;">
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <label style="color:#fff;">Contact Person Name:</label> <br><br>
+                        <input type="text" name="contact" required
+                            style="width:100%; padding:0.5em; border-radius:0.5em; border:1px solid #22d3ee22; background:#232323; color:#fff;">
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <label style="color:#fff;">Email:</label> <br><br>
+                        <input type="email" name="email" required
+                            style="width:100%; padding:0.5em; border-radius:0.5em; border:1px solid #22d3ee22; background:#232323; color:#fff;">
+                        <div id="emailError" style="color:#ef4444; font-size:0.95em; display:none;">Please enter a valid
+                            email address.</div>
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <label style="color:#fff;">Phone:</label> <br><br>
+                        <input type="tel" name="phone" required pattern="^(\+?\d{1,3}[- ]?)?\d{8,15}$"
+                            style="width:100%; padding:0.5em; border-radius:0.5em; border:1px solid #22d3ee22; background:#232323; color:#fff;">
+                        <div id="phoneError" style="color:#ef4444; font-size:0.95em; display:none;">Please enter a valid
+                            phone number.</div>
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <label style="color:#fff;">Website:</label> <br><br>
+                        <input type="url" name="website" required
+                            style="width:100%; padding:0.5em; border-radius:0.5em; border:1px solid #22d3ee22; background:#232323; color:#fff;">
+                        <div id="websiteError" style="color:#ef4444; font-size:0.95em; display:none;">Please enter a
+                            valid website URL.</div>
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <label style="color:#fff;">Additional Information:</label> <br><br>
+                        <textarea name="info" rows="3"
+                            style="width:100%; padding:0.5em; border-radius:0.5em; border:1px solid #22d3ee22; background:#232323; color:#fff;"></textarea>
+                    </div>
+                    <button type="submit"
+                        style="padding:0.75em 2em; font-size:1.1rem; background:linear-gradient(90deg,#22d3ee 60%,#3b82f6 100%); color:#000; border:none; border-radius:999px; font-weight:bold; cursor:pointer; width:100%;">Submit</button>
+                </form>
+                <div id="modalThankYou" style="display:none; color:#22d3ee; margin-top:1rem; text-align:center;">Thank
+                    you for your enquiry! We'll be in touch soon.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sponsor-btn').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                var tier = btn.getAttribute('data-tier');
+                document.getElementById('modalTitle').textContent = 'Sponsorship Enquiry for ' + tier;
+                document.getElementById('sponsorModal').style.display = 'flex';
+            });
+        });
+
+        document.getElementById('closeModal').onclick = function () {
+            document.getElementById('sponsorModal').style.display = 'none';
+            document.getElementById('modalThankYou').style.display = 'none';
+            document.getElementById('sponsorForm').style.display = 'block';
+            document.getElementById('sponsorForm').reset();
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('websiteError').style.display = 'none';
+            document.getElementById('phoneError').style.display = 'none';
+        };
+
+        document.getElementById('sponsorForm').onsubmit = async function (e) {
+            e.preventDefault();
+
+            var company = this.company.value.trim();
+            var contact = this.contact.value.trim();
+            var email = this.email.value.trim();
+            var website = this.website.value.trim();
+            var phone = this.phone.value.trim();
+            var info = this.info.value.trim() || "None";
+            var tier = document.getElementById('modalTitle').textContent.replace('Sponsorship Enquiry for ', '');
+
+            const embed = {
+                title: `${company}`,
+                fields: [
+                    { name: "Contact Person", value: contact, inline: true },
+                    { name: "Contact Email", value: email, inline: true },
+                    { name: "Contact Phone", value: phone || "N/A", inline: true },
+                    { name: "Company Website", value: website || "N/A", inline: true },
+                    { name: "Sponsorship Tier", value: tier, inline: true },
+                    {
+                        name: "Amount", value:
+                            tier === "Bronze" ? "$500" :
+                                tier === "Silver" ? "$750" :
+                                    tier === "Gold" ? "$1200" :
+                                        tier === "Platinum" ? "$1800" : "N/A", inline: true
+                    },
+                    { name: "Additional Information", value: info || "None", inline: false }
+                ],
+                color: 3447003
+            };
+
+            const payload = JSON.stringify({ embeds: [embed] });
+
+            const webhookURL = "https://discord.com/api/webhooks/1348887888506388522/GZiC6MIvFsvIJ-U9BDhrchWeCApB4zxFObtg_vlNSSUpuox1cKwb_CMNK9FYDYphP10Q";
+
+            try {
+                const response = await fetch(webhookURL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: payload
+                });
+
+                if (response.ok) {
+                    document.getElementById('sponsorForm').style.display = 'none';
+                    document.getElementById('modalThankYou').style.display = 'block';
+                } else {
+                    alert("There was an error submitting your inquiry. Please try again later.");
+                }
+            } catch (error) {
+                console.error("Error posting to Discord webhook:", error);
+                alert("There was an error submitting your inquiry. Please try again later.");
+            }
+
+            document.getElementById('sponsorForm').style.display = 'none';
+            document.getElementById('modalThankYou').style.display = 'block';
+        };
+
+        document.getElementById('sponsorModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                document.getElementById('closeModal').onclick();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
