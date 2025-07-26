@@ -34,8 +34,11 @@
       align-items: center;
     }
 
-    /* Hero Container */
     .container {
+      min-height: calc(100vh - 7rem);
+      /* 4rem header + 3rem margin-bottom */
+      align-items: center;
+      justify-content: center;
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -490,177 +493,177 @@
 
     /**************** MEMBERSHIP ****************/
 
-  .footer-section {
-    text-align: center;
-    padding: 1rem;
-    background: #000000;
-  }
+    .footer-section {
+      text-align: center;
+      padding: 1rem;
+      background: #000000;
+    }
 
-  .membership-section {
-    padding: 4rem 2rem;
-    width: 1280px;
-  }
-  
-  .membership-container {
-    display: flex;
-    background: url("assets/footer.png") center/cover no-repeat;
-    border-radius: 15px;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .membership-content {
-    margin-left: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  .membership-content h4 {
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin: 0;
-    color: #01faff;
-  }
-  
-  .membership-content h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-    text-align: left;
-  }
-  
-  .enquire-btn {
-    background: #0078D7;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    margin-top: 1rem;
-  }
+    .membership-section {
+      padding: 4rem 2rem;
+      width: 1280px;
+    }
+
+    .membership-container {
+      display: flex;
+      background: url("assets/footer.png") center/cover no-repeat;
+      border-radius: 15px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .membership-content {
+      margin-left: auto;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .membership-content h4 {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin: 0;
+      color: #01faff;
+    }
+
+    .membership-content h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      text-align: left;
+    }
+
+    .enquire-btn {
+      background: #0078D7;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      margin-top: 1rem;
+    }
 
 
-  .footer {
-  position: relative;
-  border-top: 1px solid rgba(31,41,55,0.5);
-  background-color: rgba(0,0,0,0.8);
-  backdrop-filter: blur(24px);
-  padding: 3rem 0;
-  width: 1280px;
-  border-radius: 1rem;
-}
+    .footer {
+      position: relative;
+      border-top: 1px solid rgba(31, 41, 55, 0.5);
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(24px);
+      padding: 3rem 0;
+      width: 1280px;
+      border-radius: 1rem;
+    }
 
-.footer-grid {
-  display: grid;
-  gap: 2rem;
-}
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+    }
 
-/* Single column on small, three on md+ */
-@media (min-width: 768px) {
-  .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+    /* Single column on small, three on md+ */
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-.footer-col {
-  /* spacing is handled by grid gap */
-}
+    .footer-col {
+      /* spacing is handled by grid gap */
+    }
 
-/* Logo group (reuse header styles) */
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
+    /* Logo group (reuse header styles) */
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
 
-.logo-icon-wrapper .icon-bg {
-  width: 2.5rem;
-  height: 2.5rem;
-  background: linear-gradient(to right, var(--cyan-400), var(--blue-500));
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .logo-icon-wrapper .icon-bg {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: linear-gradient(to right, var(--cyan-400), var(--blue-500));
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.cpu-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #000;
-}
+    .cpu-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #000;
+    }
 
-.site-text .site-title {
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: #fff;
-}
+    .site-text .site-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #fff;
+    }
 
-.site-text .site-subtitle {
-  font-size: 0.75rem;
-  color: var(--cyan-400);
-}
+    .site-text .site-subtitle {
+      font-size: 0.75rem;
+      color: var(--cyan-400);
+    }
 
-/* Tagline */
-.footer-tagline {
-  color: var(--gray-400);
-  margin: 0;
-}
+    /* Tagline */
+    .footer-tagline {
+      color: var(--gray-400);
+      margin: 0;
+    }
 
-/* Section headings */
-.footer-heading {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: var(--cyan-400);
-}
+    /* Section headings */
+    .footer-heading {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: var(--cyan-400);
+    }
 
-/* Link list */
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: var(--gray-400);
-}
+    /* Link list */
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: var(--gray-400);
+    }
 
-.footer-links li {
-  margin-bottom: 0.5rem;
-}
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
 
-.footer-links a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s;
-}
+    .footer-links a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-.footer-links a:hover {
-  color: var(--cyan-400);
-}
+    .footer-links a:hover {
+      color: var(--cyan-400);
+    }
 
-/* Contact info text */
-.footer-contact > div {
-  color: var(--gray-400);
-  margin-bottom: 0.5rem;
-}
+    /* Contact info text */
+    .footer-contact>div {
+      color: var(--gray-400);
+      margin-bottom: 0.5rem;
+    }
 
-/* Bottom copyright */
-.footer-bottom {
-  border-top: 1px solid rgba(31,41,55,0.5);
-  margin-top: 2rem;
-  padding-top: 2rem;
-  text-align: center;
-  color: var(--gray-400);
-}
+    /* Bottom copyright */
+    .footer-bottom {
+      border-top: 1px solid rgba(31, 41, 55, 0.5);
+      margin-top: 2rem;
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--gray-400);
+    }
 
-.containerfooter {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+    .containerfooter {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
   </style>
 </head>
 
@@ -777,27 +780,43 @@
     </div>
   </section>
 
+  <br><br><br><br><br><br>
+
   <!-- POWERED BY -->
   <section class="powered-section">
     <div class="powered-title">POWERED BY</div>
     <div class="powered-heading">INDUSTRY LEADERS</div>
     <div class="sponsors">
-      <div class="sponsor"><i data-lucide="github" class="sponsor-icon"></i>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(34,211,238,0.15); border: 2px solid #22d3ee;">
+        <i data-lucide="github" class="sponsor-icon"></i>
         <div class="sponsor-name">GitHub</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Empowering open source and collaboration</div>
       </div>
-      <div class="sponsor"><i data-lucide="zap" class="sponsor-icon"></i>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(236,72,153,0.15); border: 2px solid #ec4899;">
+        <i data-lucide="zap" class="sponsor-icon"></i>
         <div class="sponsor-name">Red Bull</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Fueling energy and innovation</div>
       </div>
-      <div class="sponsor"><i data-lucide="server" class="sponsor-icon"></i>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(16,185,129,0.15); border: 2px solid #22c55e;">
+        <i data-lucide="server" class="sponsor-icon"></i>
         <div class="sponsor-name">S3B</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Supporting engineering infrastructure</div>
       </div>
-      <div class="sponsor"><i data-lucide="award" class="sponsor-icon"></i>
+      <div class="sponsor" style="box-shadow: 0 4px 16px rgba(168,85,247,0.15); border: 2px solid #a855f7;">
+        <i data-lucide="award" class="sponsor-icon"></i>
         <div class="sponsor-name">E-lead</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">Championing leadership in engineering</div>
       </div>
+    </div>
+    <div style="margin-top:2rem; color:#94a3b8; font-size:1rem;">
+      <i data-lucide="handshake" style="vertical-align:middle; margin-right:0.5rem;"></i>
+      <span>We partner with world-class organisations to bring you the best opportunities, resources, and experiences.</span>
     </div>
   </section>
 
-  
+
+  <br><br><br><br><br><br>
+
   <section id="membership" class="membership-section">
     <div class="membership-container">
       <div class="membership-content">
@@ -806,73 +825,78 @@
         <a href="#" class="btn enquire-btn">Enquire today</a>
       </div>
     </div>
-  </section>  
+  </section>
+
+
+  <br><br><br><br><br><br>
 
   <!-- Footer -->
   <footer class="footer">
-  <div class="containerfooter">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="logo-group">
-          <div class="logo-icon-wrapper">
-            <div class="icon-bg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cpu-icon">
-                <rect width="16" height="16" x="4" y="4" rx="2"></rect>
-                <rect width="6" height="6" x="9" y="9" rx="1"></rect>
-                <path d="M15 2v2"></path>
-                <path d="M15 20v2"></path>
-                <path d="M2 15h2"></path>
-                <path d="M2 9h2"></path>
-                <path d="M20 15h2"></path>
-                <path d="M20 9h2"></path>
-                <path d="M9 2v2"></path>
-                <path d="M9 20v2"></path>
-              </svg>
+    <div class="containerfooter">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-group">
+            <div class="logo-icon-wrapper">
+              <div class="icon-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="cpu-icon">
+                  <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+                  <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+                  <path d="M15 2v2"></path>
+                  <path d="M15 20v2"></path>
+                  <path d="M2 15h2"></path>
+                  <path d="M2 9h2"></path>
+                  <path d="M20 15h2"></path>
+                  <path d="M20 9h2"></path>
+                  <path d="M9 2v2"></path>
+                  <path d="M9 20v2"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="site-text">
+              <div class="site-title">MESS</div>
+              <div class="site-subtitle">MACQUARIE ENGINEERING</div>
             </div>
           </div>
-          <div class="site-text">
-            <div class="site-title">MESS</div>
-            <div class="site-subtitle">MACQUARIE ENGINEERING</div>
+          <p class="footer-tagline">Building the future, one connection at a time.</p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">QUICK LINKS</h3>
+          <ul class="footer-links">
+            <li><a href="https://discord.com/invite/tP6E4efsyx">Events</a></li>
+            <li><a href="https://discord.com/invite/tP6E4efsyx">Membership</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="footer-col">
+          <h3 class="footer-heading">CONNECT</h3>
+          <div class="footer-contact">
+            <div>Macquarie University</div>
+            <div>Sydney, Australia</div>
+            <div>contact.messsociety@gmail.com</div>
           </div>
         </div>
-        <p class="footer-tagline">Building the future, one connection at a time.</p>
       </div>
 
-      <!-- Quick links -->
-      <div class="footer-col">
-        <h3 class="footer-heading">QUICK LINKS</h3>
-        <ul class="footer-links">
-          <li><a href="https://discord.com/invite/tP6E4efsyx">Events</a></li>
-          <li><a href="https://discord.com/invite/tP6E4efsyx">Membership</a></li>
-          <li><a href="#">Sponsors</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact info -->
-      <div class="footer-col">
-        <h3 class="footer-heading">CONNECT</h3>
-        <div class="footer-contact">
-          <div>Macquarie University</div>
-          <div>Sydney, Australia</div>
-          <div>contact.messsociety@gmail.com</div>
-        </div>
+      <div class="footer-bottom">
+        <p>© 2025 Macquarie Engineering Student Society. All rights reserved.</p>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 Macquarie Engineering Student Society. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
   <script>lucide.createIcons();</script>
 
 
   <script>
-    document.querySelectorAll('button, .enquire-btn').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
+    document.querySelectorAll('button, .enquire-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
         window.location.href = "https://discord.com/invite/tP6E4efsyx";
       });
     });
