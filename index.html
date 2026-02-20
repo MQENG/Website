@@ -47,7 +47,7 @@
       <nav class="nav-links">
         <a href="/Website/#about" class="nav-link">About</a>
         <a href="/Website/sponsor.html" class="nav-link">Sponsors Us</a>
-        <button class="join-button">JOIN NOW</button>
+        <button class="join-button" data-link="https://docs.google.com/forms/d/e/1FAIpQLSd2sXwhKjTRx-oGDPvuZ0P-ScnMej1HAqzjaShR3HERkkJt_g/viewform">JOIN NOW</button>
       </nav>
     </div>
   </header>
@@ -61,8 +61,8 @@
       <p class="description">Connect together while you connect the world. Join Macquarie's most innovative engineering
         community.</p>
       <div class="button-group">
-        <button class="btn primary"><i data-lucide="rocket"></i>JOIN THE REVOLUTION</button>
-        <button class="btn secondary"><i data-lucide="calendar"></i>VIEW EVENTS</button>
+        <button class="btn primary" data-link="https://docs.google.com/forms/d/e/1FAIpQLSd2sXwhKjTRx-oGDPvuZ0P-ScnMej1HAqzjaShR3HERkkJt_g/viewform"><i data-lucide="rocket"></i>JOIN THE REVOLUTION</button>
+        <button class="btn secondary" data-link="https://discord.com/invite/tP6E4efsyx"><i data-lucide="calendar"></i>VIEW EVENTS</button>
       </div>
       <div class="stats">
         <div class="stat">
@@ -155,7 +155,7 @@
       <div class="membership-content">
         <h4>BECOME A MEMBER</h4>
         <h2>Grow your network and expand your skills.</h2>
-        <a href="#" class="btn enquire-btn">Enquire today</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2sXwhKjTRx-oGDPvuZ0P-ScnMej1HAqzjaShR3HERkkJt_g/viewform" class="btn enquire-btn">Enquire today</a>
       </div>
     </div>
   </section>
@@ -200,7 +200,7 @@
           <h3 class="footer-heading">QUICK LINKS</h3>
           <ul class="footer-links">
             <li><a href="https://discord.com/invite/tP6E4efsyx">Events</a></li>
-            <li><a href="https://discord.com/invite/tP6E4efsyx">Membership</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd2sXwhKjTRx-oGDPvuZ0P-ScnMej1HAqzjaShR3HERkkJt_g/viewform">Membership</a></li>
             <li><a href="/Website/sponsor.html">Sponsors</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -228,9 +228,9 @@
 
 
   <script>
-    document.querySelectorAll('button, .enquire-btn').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        window.location.href = "https://discord.com/invite/tP6E4efsyx";
+    document.querySelectorAll('[data-link]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        window.location.href = btn.getAttribute('data-link');
       });
     });
   </script>
